@@ -2,10 +2,11 @@
 
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
-**Status:** New calculator deployment verified; learner-summary review and GitHub PR/CI completion remain pending.
+**Status:** Calculator newly deployed and verified; learner summary reviewed and approved. The linked PR and issue record GitHub publication and completion state.
 **Public calculator:** [https://calc.xenoshin.com](https://calc.xenoshin.com)
 **Lesson issue:** [#1](https://github.com/pb392/my-server-studio/issues/1)
 **Feature branch:** `studio-001-calculator`
+**Pull request:** [#2](https://github.com/pb392/my-server-studio/pull/2) · [Latest PR checks](https://github.com/pb392/my-server-studio/pull/2/checks)
 
 ## Agreed result
 
@@ -29,16 +30,16 @@ The original successful new-launch report is preserved in [studio/evidence.json]
 | Evidence | Actual result / link |
 |---|---|
 | Local prepared checks | Python 3.12 setup completed. `check --fast`: Black and Pylint passed; 91 tests passed and 2 E2E tests were deselected. Local Docker was unavailable, so no local Docker E2E pass is claimed. |
-| Initial CI | [Template-copy CI run](https://github.com/pb392/my-server-studio/actions/runs/40919263547): `studio`, `validate` and `integration-contract` passed. Final PR CI remains pending and will be linked separately. |
+| Full GitHub CI | [PR technical-evidence run](https://github.com/pb392/my-server-studio/actions/runs/40924911357) passed `studio` (including both real-image browser tests), `validate` and `integration-contract` at commit `48eab9a`. [Latest PR checks](https://github.com/pb392/my-server-studio/pull/2/checks) track subsequent revisions; [main branch workflow runs](https://github.com/pb392/my-server-studio/actions/workflows/validate.yml?query=branch%3Amain) track the merge. Initial template-copy CI is separate from this PR evidence. |
 | Runtime and public API | [Sanitized launch evidence](studio/evidence.json): expected image/commit and production health matched; trusted HTTPS passed; multiplication returned HTTP 200 and 42; division by zero returned 400; numeric string input returned 422. |
 | Existing services | [Preservation evidence](studio/evidence.json): four existing containers unchanged in identity, state and published ports. Production https://xenoshin.com and QA https://qa.xenoshin.com returned HTTP 200 with trusted TLS both before and after launch. This does not certify every function of those services. |
 | AI browser checks | On the public calculator, `6 × 7` showed browser 42, API 42 and “Results match”; `6 ÷ 0` showed “Cannot divide by zero.” and no result match. [Multiplication screenshot](studio/ai-browser-multiply.jpg), [invalid-input screenshot](studio/ai-browser-invalid.jpg). These are AI observations, separate from the learner's. |
-| Learner contributions and assistance | [LEARNING.md](LEARNING.md); accuracy review and detailed learner browser/keep observations remain pending. |
-| PR, final CI, merge and issue closure | Pending. [Lesson issue #1](https://github.com/pb392/my-server-studio/issues/1). |
+| Learner contributions and assistance | [LEARNING.md](LEARNING.md) records actual prediction, interpretation, browser observation, keep reasoning and coaching help. The learner approved the excerpts and assistance disclosure before publication. |
+| PR, final CI, merge and issue closure | [PR #2](https://github.com/pb392/my-server-studio/pull/2), [latest PR checks](https://github.com/pb392/my-server-studio/pull/2/checks), [lesson issue #1](https://github.com/pb392/my-server-studio/issues/1). These records show the actual latest check, merge and closure state. |
 
-## Remaining publication work and limits
+## Publication and limits
 
-Review the AI-drafted learning summary before publishing its excerpts. GitHub SSH access was enabled with the learner's approval using the existing Mac public key, scoped to this repository. SSH fetch succeeded; the private key stayed on the Mac. Initial file retrieval used HTTPS while SSH access was repaired. Link the actual PR and its full CI result, merge to `main`, and verify issue closure and the checks on `main`.
+The learner reviewed and approved the AI-drafted learning excerpts before their first commit/push. GitHub SSH access was enabled with the learner's approval using the existing Mac public key, scoped to this repository. SSH fetch succeeded; the private key stayed on the Mac. Initial file retrieval used HTTPS while SSH access was repaired. [PR #2](https://github.com/pb392/my-server-studio/pull/2) links the lesson issue and required CI; its merge record and the workflow runs on `main` are the publication evidence. The GitHub repository is public for instructor access.
 
 Private SSH settings, sudo authentication, raw runtime output and initial-launch backup stay outside Git in ignored local state. The public JSON is the prepared sanitized export. Passing CI, a published image, runtime metadata, browser observations and the learner's explanations establish different claims. A green status does not certify authorship, understanding or whole-server security.
 

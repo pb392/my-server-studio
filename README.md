@@ -1,5 +1,9 @@
 # IS373 Server Studio
 
+> **My Lesson 01 submission:** [Public calculator](https://calc.xenoshin.com) · [SPEC](SPEC.md) · [Reviewed learning summary](LEARNING.md) · [Sanitized evidence](studio/evidence.json) · [Lesson issue #1](https://github.com/pb392/my-server-studio/issues/1) · [PR #2](https://github.com/pb392/my-server-studio/pull/2)
+>
+> This is a separate deployment of the supplied fixed image on the existing server. The original studio instructions follow below.
+
 **Launch a calculator on the server you already built—with an AI coach—and show
 what proves it works.** Your first lesson uses a published image, your existing
 Docker/Traefik setup and one public HTTPS hostname. You practice agreeing a small
